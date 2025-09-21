@@ -3,7 +3,7 @@ services:
     image: postgres:16-alpine
     container_name: po-crud-db
     environment:
-      POSTGRES_DB: po_crud_db
+      POSTGRES_DB: giri_db
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
     ports:
@@ -24,7 +24,7 @@ services:
       db:
         condition: service_healthy
     environment:
-      SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/po_crud_db
+      SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/giri_db
       SPRING_DATASOURCE_USERNAME: postgres
       SPRING_DATASOURCE_PASSWORD: postgres
       SPRING_JPA_HIBERNATE_DDL_AUTO: validate
@@ -35,3 +35,4 @@ services:
 
 volumes:
   db-data:
+

@@ -1,7 +1,7 @@
 -- Database and schema setup
-CREATE DATABASE po_crud_db;
+CREATE DATABASE giri_db;
 
-\connect po_crud_db;
+\connect giri_db;
 
 CREATE SCHEMA IF NOT EXISTS procurement;
 
@@ -66,3 +66,4 @@ CREATE TABLE procurement.po_d (
 
 CREATE INDEX idx_po_d_poh_id ON procurement.po_d (poh_id);
 CREATE INDEX idx_po_d_item_id ON procurement.po_d (item_id);
+
